@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const submitBtn = document.getElementById("submit");
   const existingBtn = document.getElementById("existing");
 
-  // Check if credentials are saved
   const savedUsername = localStorage.getItem("username");
   const savedPassword = localStorage.getItem("password");
 
@@ -13,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     existingBtn.style.display = "inline-block";
   }
 
-  // Submit form
   document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
     const username = usernameInput.value;
@@ -35,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         : "none";
   });
 
-  // Existing user login
   existingBtn.addEventListener("click", function () {
     const user = localStorage.getItem("username");
     if (user) {
